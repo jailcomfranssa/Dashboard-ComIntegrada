@@ -6,6 +6,7 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { LoginComponent } from './modules/login/login.component';
 import { CreateAccountComponent } from './modules/create-account/create-account.component';
 import { AuthGuard } from './modules/shared/auth.guard';
+import { ProdutosComponent } from './modules/produtos/produtos.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,16 @@ const routes: Routes = [
         path: 'posts',
         component: PostsComponent
       },
+
+      {
+        path: 'produtos',
+        component: ProdutosComponent
+      },
+
+      {
+        path:'creatConta',
+        component: CreateAccountComponent
+      }
      
      
   ],
@@ -37,14 +48,6 @@ const routes: Routes = [
         component: LoginComponent,
         
       },
-      
-      {
-        path:'creatConta',
-        component: CreateAccountComponent
-      }
-
-      
-      
      
       
     ]

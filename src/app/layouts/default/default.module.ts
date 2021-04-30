@@ -1,3 +1,4 @@
+import { httpInterceptorProviders } from './../../http-interceptors/index';
 import { DashboardService } from './../../modules/dashboard.service';
 import { MatDividerModule } from '@angular/material/divider';
 
@@ -20,6 +21,11 @@ import {MatInputModule} from '@angular/material/input';
 import{MatButtonModule}from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatIconModule}from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {HttpClientModule} from '@angular/common/http';
+import { ProdutosComponent } from 'src/app/modules/produtos/produtos.component';
+
+
 
 
 
@@ -31,7 +37,8 @@ import {MatIconModule}from '@angular/material/icon';
     DashboardComponent,
     PostsComponent,
     LoginComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    ProdutosComponent
   ],
   imports: [
     CommonModule,
@@ -47,11 +54,15 @@ import {MatIconModule}from '@angular/material/icon';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    HttpClientModule,
+   
     
   ],
   providers:[
-    DashboardService
+    DashboardService,
+    httpInterceptorProviders
   ]
 })
 export class DefaultModule { }

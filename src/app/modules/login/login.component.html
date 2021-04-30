@@ -1,54 +1,38 @@
+
+
+
 <div class="login-page">
     <mat-card class="example-card">
         <mat-card-header>
           
-          <mat-card-title>Login/Registro</mat-card-title>
+          <mat-card-title>Login</mat-card-title>
           <mat-card-subtitle>ADM-Dashboard</mat-card-subtitle>
         </mat-card-header>
         
         <mat-card-content>
-            <mat-tab-group>
-                <mat-tab label="Login"> 
+            
+                <form (ngSubmit)="onSubmit()" #form="ngForm">
+               
                     
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Email</mat-label>
-                        <input type="email" matInput placeholder="Email" value="" [(ngModel)]="log_email">
-                        <mat-icon matSuffix>email</mat-icon>
-                    </mat-form-field>
+                        
+                        
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Email</mat-label>
+                                <input type="email" matInput placeholder="Email" value="" [(ngModel)]="login.email" required name="login">
+                                <mat-icon matSuffix>email</mat-icon>
+                            </mat-form-field>
+                            
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Senha</mat-label>
+                                <input type="password" matInput placeholder="Senha"  [(ngModel)]="login.password" required name="password">
+                                <mat-icon matSuffix>vpn_key</mat-icon>
+                            </mat-form-field>
+                            <button type="submit" class="mat-button" mat-raised-button color="primary" [disabled]="form.form.invalid">Entrar</button>
                     
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Senha</mat-label>
-                        <input type="password" matInput placeholder="Senha" [(ngModel)]="log_password">
-                        <mat-icon matSuffix>vpn_key</mat-icon>
-                    </mat-form-field>
-                    <button class="mat-button" mat-raised-button color="primary" (click)="login()">Login</button>
-                    
-                </mat-tab>
-                <mat-tab label="Register">
-
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Email</mat-label>
-                        <input type="email" matInput placeholder="Email" value="" [(ngModel)]="reg_email">
-                        <mat-icon matSuffix>email</mat-icon>
-                    </mat-form-field>
-                    
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Senha</mat-label>
-                        <input type="password" matInput placeholder="Senha" [(ngModel)]="reg_password">
-                        <mat-icon matSuffix>vpn_key</mat-icon>
-                    </mat-form-field>
-
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Confirme Senha</mat-label>
-                        <input type="password" matInput placeholder="Confirme Senha" [(ngModel)]="reg_password_confirm">
-                        <mat-icon matSuffix>vpn_key</mat-icon>
-                    </mat-form-field>
-
-                    <button class="mat-button" mat-raised-button color="primary" (click)="register()">Registrar</button>
-
-                </mat-tab>
-                
-              </mat-tab-group>
+                   
+                </form>
+               
+              
          
         </mat-card-content>
         

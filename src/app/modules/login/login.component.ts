@@ -1,4 +1,6 @@
+import { AccountService } from './../shared/account.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,19 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  log_email:string
-  log_password:string
-  log_password_confirm:string
-  reg_email:string
-  reg_password:string
-  reg_password_confirm:string
+  login = {
+    email: '',
+    password:''
+  }
   
-  register(){}
-  login(){}
-
-  constructor() { }
+  constructor(private accountService: AccountService , private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  async onSubmit(){
+    try{
+      const result = await this.accountService.login(this.login);
+      console.log(`Login Efetuado: ${result}`);
+      this.router.navigate(['']);
+
+    }catch (error){
+      console.log(error);
+
+    }
   }
 
 }
