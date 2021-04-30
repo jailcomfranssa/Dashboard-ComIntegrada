@@ -13,6 +13,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table'
+import { LoginComponent } from 'src/app/modules/login/login.component';
+import { CreateAccountComponent } from 'src/app/modules/create-account/create-account.component';
+import {MatTabsModule}from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+import{MatButtonModule}from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import {MatIconModule}from '@angular/material/icon';
 
 
 
@@ -22,7 +29,9 @@ import {MatTableModule} from '@angular/material/table'
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent
+    PostsComponent,
+    LoginComponent,
+    CreateAccountComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +42,12 @@ import {MatTableModule} from '@angular/material/table'
     FlexLayoutModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule,
+    MatIconModule
     
   ],
   providers:[
