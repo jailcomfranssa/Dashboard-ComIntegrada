@@ -1,4 +1,4 @@
-<mat-nav-list>
+<mat-nav-list  *ngIf="correnteUser">
     <div class="profile-card">
         <div class="header"></div>
         <h2> Soufiane FADIL</h2>
@@ -10,10 +10,10 @@
 
     <h2 matSubheader> Pages</h2>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Post</a>
     
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/creatConta">Funcionario</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/produtos">Produtos</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Criar Produto</a>
     
 
     

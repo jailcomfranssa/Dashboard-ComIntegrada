@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <button mat-icon-button (click)="toggleSideBar()">
-            <mat-icon>menu</mat-icon>
+            <mat-icon *ngIf="correnteUser">menu</mat-icon>
         </button>
         <span>APP Logo</span>
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
@@ -19,11 +19,11 @@
                 </li>
 
                 <li>
-                    <button mat-button [matMenuTriggerFor]="menu">
+                    <button mat-button [matMenuTriggerFor]="menu" *ngIf="correnteUser">
                         <mat-icon>person_outline</mat-icon>
                     </button>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
+                    <mat-menu #menu="matMenu" >
+                        <button mat-menu-item (click)="sair()">
                             <mat-icon>exit_to_app</mat-icon>
                             Sair
                         </button>
