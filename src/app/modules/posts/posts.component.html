@@ -1,7 +1,63 @@
-<button mat-raised-button (click)="createProduct()" color="primary">
-    Salvar
-</button>
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form >
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="product.nome" name="nome">
+        </mat-form-field>
 
-<button mat-raised-button (click)="cancel()" >
-    Cancelar
-</button>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)"  [(ngModel)]="product.preco" name="preco">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="codigo_ean13"  [(ngModel)]="product.codigo_ean13" name="codigo_ean13">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Peso"  [(ngModel)]="product.peso" name="peso">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="comprimento (m)"  [(ngModel)]="product.comprimento" name="comprimento">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="altura (m)"  [(ngModel)]="product.altura" name="altura">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="imagem"  [(ngModel)]="product.imagem" name="imagem">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="descricao"  [(ngModel)]="product.descricao" name="descricao">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Descricao Curta"  [(ngModel)]="product.descricao_curta" name="descricao_curta">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Fabricante"  [(ngModel)]="product.fabricante" name="fabricante">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Categoria"  [(ngModel)]="product.categ_id" name="categ_id">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Quantidade (R$)"  [(ngModel)]="product.quant" name="quant">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createProduct()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        Cancelar
+    </button>
+</mat-card>
+
+
+

@@ -12,18 +12,18 @@ export class PostsComponent implements OnInit {
 
   product: Product = {
     
-    nome:"teste",
-    codigo_ean13: "test",
-    peso: 1,
-    comprimento: 1,
-    altura: 1,
-    imagem: "test",
-    descricao: "test",
-    descricao_curta:"test",
-    preco: 1,
-    fabricante: "test",
-    categ_id: 1,
-    quant: 1
+    nome:'',
+    codigo_ean13: '',
+    peso: null,
+    comprimento: null,
+    altura: null,
+    imagem: '',
+    descricao: '',
+    descricao_curta:'',
+    preco: null,
+    fabricante: '',
+    categ_id: null,
+    quant: null
   }
 
   constructor(private productService: ProductService, private router: Router) { }
