@@ -2,7 +2,7 @@ import { httpInterceptorProviders } from './../../http-interceptors/index';
 import { DashboardService } from './../../modules/dashboard.service';
 import { MatDividerModule } from '@angular/material/divider';
 
-import { PostsComponent } from './../../modules/posts/posts.component';
+import { PostsComponent } from '../../modules/products/posts/posts.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,8 +23,9 @@ import {FormsModule} from '@angular/forms';
 import {MatIconModule}from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http';
-import { ProdutosComponent } from 'src/app/modules/produtos/produtos.component';
+import { ProdutosComponent } from 'src/app/modules/products/produtos/produtos.component';
 import {MatSnackBarModule}from '@angular/material/snack-bar'
+import { ProdutosReadComponent } from 'src/app/modules/products/produtos-read/produtos-read.component';
 
 
 
@@ -39,7 +40,8 @@ import {MatSnackBarModule}from '@angular/material/snack-bar'
     PostsComponent,
     LoginComponent,
     CreateAccountComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    ProdutosReadComponent
   ],
   imports: [
     CommonModule,

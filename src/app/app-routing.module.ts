@@ -1,4 +1,4 @@
-import { PostsComponent } from './modules/posts/posts.component';
+import { PostsComponent } from './modules/products/posts/posts.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
@@ -6,7 +6,7 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { LoginComponent } from './modules/login/login.component';
 import { CreateAccountComponent } from './modules/create-account/create-account.component';
 import { AuthGuard } from './modules/shared/auth.guard';
-import { ProdutosComponent } from './modules/produtos/produtos.component';
+import { ProdutosComponent } from './modules/products/produtos/produtos.component';
 
 
 const routes: Routes = [

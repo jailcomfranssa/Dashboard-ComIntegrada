@@ -1,5 +1,6 @@
+
 import { Observable } from 'rxjs';
-import { environment } from './../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -23,6 +24,10 @@ export class ProductService{
     create(produto: Product ): Observable<Product>{
         return this.http.post<Product>(`${environment.api}/produtos`,produto)
 
+    }
+
+    read(): Observable<Product[]> {
+        return this.http.get<Product[]>(`${environment.api}/produtos`);
     }
 
 }
