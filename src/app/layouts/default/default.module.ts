@@ -30,14 +30,6 @@ import { ProdutosReadComponent } from 'src/app/modules/products/produtos-read/pr
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 
-
-
-
-
-
-
-
-
 @NgModule({
 
   declarations: [
