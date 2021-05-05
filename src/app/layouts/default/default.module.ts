@@ -1,3 +1,4 @@
+import { ProductUpdateComponent } from './../../modules/products/product-update/product-update.component';
 import { httpInterceptorProviders } from './../../http-interceptors/index';
 import { DashboardService } from './../../modules/dashboard.service';
 import { MatDividerModule } from '@angular/material/divider';
@@ -29,6 +30,10 @@ import {MatSnackBarModule}from '@angular/material/snack-bar'
 import { ProdutosReadComponent } from 'src/app/modules/products/produtos-read/produtos-read.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
+import {Component} from '@angular/core';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 
 @NgModule({
 
@@ -39,7 +44,8 @@ import { MatMenuModule } from '@angular/material/menu';
     LoginComponent,
     CreateAccountComponent,
     ProdutosComponent,
-    ProdutosReadComponent
+    ProdutosReadComponent,
+    ProductUpdateComponent
   ],
   imports: [
     CommonModule,
@@ -61,18 +67,17 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSnackBarModule,
     MatSortModule,
     MatMenuModule,
-  
-    
-    
-    
-    
-    
+    MatGridListModule,
+   
    
     
   ],
   providers:[
     DashboardService,
-    httpInterceptorProviders
+    httpInterceptorProviders,
+    Component,
+    
+    
   ]
 })
 export class DefaultModule { }

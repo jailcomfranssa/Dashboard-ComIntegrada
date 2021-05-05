@@ -1,3 +1,4 @@
+import { ProductUpdateComponent } from './modules/products/product-update/product-update.component';
 import { PostsComponent } from './modules/products/posts/posts.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,6 +8,7 @@ import { LoginComponent } from './modules/login/login.component';
 import { CreateAccountComponent } from './modules/create-account/create-account.component';
 import { AuthGuard } from './modules/shared/auth.guard';
 import { ProdutosComponent } from './modules/products/produtos/produtos.component';
+
 
 
 const routes: Routes = [
@@ -27,6 +29,11 @@ const routes: Routes = [
       {
         path: 'produtos',
         component: ProdutosComponent
+      },
+
+      {
+        path: 'produto/edit/:id',
+        component: ProductUpdateComponent
       },
 
       {

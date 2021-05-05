@@ -1,9 +1,11 @@
+import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../produtos/product.service';
 import { Product } from '../produtos/produto.model';
 import { MatSort } from '@angular/material/sort';
+
 
 
 
@@ -30,7 +32,7 @@ export class ProdutosReadComponent implements OnInit {
 
   dataSource: MatTableDataSource<InProducts>;
   inProducts: InProducts[] = [];
-  columns: string[] = ['id','nome','codigo_ean13','descricao_curta','preco','fabricante','categ_id','quant','acao'];
+  columns: string[] = ['id','nome','codigo_ean13','preco','espc','quant','descricao_curta','fabricante','categ_id','acao'];
 
   @ViewChild(MatSort,{static:true}) sort: MatSort;
   @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
@@ -58,5 +60,7 @@ export class ProdutosReadComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+ 
 
 }

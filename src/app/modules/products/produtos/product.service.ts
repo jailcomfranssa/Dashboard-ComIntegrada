@@ -1,4 +1,5 @@
 
+
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -28,6 +29,20 @@ export class ProductService{
 
     read(): Observable<Product[]> {
         return this.http.get<Product[]>(`${environment.api}/produtos`);
+    }
+
+    readById(id: string): Observable<Product>{
+        return this.http.get<Product>(`${environment.api}/produtos/${id} `)
+
+    }
+
+    update(product: Product): Observable<Product>{
+        return this.http.put<Product>(`${environment.api}/produtos/${product.id}`,product)
+
+    }
+
+    delete(id: string): Observable<Product>{
+        return this.http.delete<Product>(`${environment.api}/produtos/${id}`);
     }
 
 }
