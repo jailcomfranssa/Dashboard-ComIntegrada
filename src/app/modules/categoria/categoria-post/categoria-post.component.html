@@ -1,0 +1,34 @@
+<mat-card class="mat-elevation-z8" class="carde">
+    <mat-card-title>Nova Categoria</mat-card-title>
+    <form >
+        
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="categoria" [(ngModel)]="categoria.nome" name="nome">
+                    </mat-form-field>
+                </td>
+
+              
+               
+          </tr>
+        </table>
+
+
+        
+       
+
+       
+    </form>
+
+    <button mat-raised-button (click)="createCategoria()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        Cancelar
+    </button>
+</mat-card>

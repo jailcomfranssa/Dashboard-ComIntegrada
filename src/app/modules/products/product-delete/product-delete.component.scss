@@ -25,14 +25,14 @@
   td {
     padding-right: 8px;
   }
+
+.mat-input-element:disabled{
+    color: red;
+}
   
 
 button{
     margin: 10px 10px 10px 10px; 
-    
 }
 
-.green{
-  background-color: green;
-    color: white;
-}
+

@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,11 +8,11 @@ import { Injectable } from '@angular/core';
 })
 export class AccountService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
   async login(user: any){
       const result = await this.http.post<any>(`${environment.api}/auth/login`,user).toPromise();
-      if(result && result.token){
+      if(result && result.token && result.is_user == 0){
         console.log(result);
         window.localStorage.setItem('token', result.token);
         window.localStorage.setItem('name', result.name);
@@ -19,6 +20,7 @@ export class AccountService {
         window.localStorage.setItem('is_user',result.is_user)
         return true;
       }
+      alert('Erro!! Email ou senha invalido');
       return false;
 
   }
@@ -46,6 +48,15 @@ export class AccountService {
 
     
   }
+
+  showMessage(msg: string, isError: boolean = false): void{
+    this.snackBar.open(msg, 'X',{
+        duration: 3000,
+        horizontalPosition: "right",
+        verticalPosition: "top",
+        
+    })
+}
 
   
 }

@@ -1,0 +1,36 @@
+<mat-card class="mat-elevation-z8" class="carde">
+    <mat-card-title >
+        Excluir Categoria:
+        
+    </mat-card-title>
+
+
+
+    <form >
+        
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nome" [(value)]="categoria.nome" name="nome" disabled>
+                    </mat-form-field>
+                </td>
+
+               
+               
+          </tr>
+        </table>
+
+
+    </form>
+
+    <button mat-raised-button (click)="deleteCategoria()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="primary">
+        Cancelar
+    </button>
+</mat-card>

@@ -1,5 +1,11 @@
 <mat-card class="mat-elevation-z8" class="carde">
-    <mat-card-title>Atualizar Produto</mat-card-title>
+    <mat-card-title >
+        Excluir Produto:
+        
+    </mat-card-title>
+
+
+
     <form >
         
 
@@ -8,13 +14,13 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Nome" [(ngModel)]="product.nome" name="nome">
+                        <input matInput placeholder="Nome" [(value)]="product.nome" name="nome" disabled>
                     </mat-form-field>
                 </td>
 
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Preço (R$)"  [(ngModel)]="product.preco" name="preco">
+                        <input matInput placeholder="Preço (R$)"  [(value)]="product.preco" name="preco" disabled>
                     </mat-form-field>
                 </td>
                
@@ -27,36 +33,38 @@
                 
                 <td>
                     <mat-form-field class="codigo_ean13">
-                        <input matInput placeholder="codigo_ean13"  [(ngModel)]="product.codigo_ean13" name="codigo_ean13">
+                        <input matInput placeholder="codigo_ean13"  [(value)]="product.codigo_ean13" name="codigo_ean13" disabled>
                     </mat-form-field>
                 </td>
 
                 <td>
                     <mat-form-field>
-                        <input matInput placeholder="Peso (KG)"  [(ngModel)]="product.peso" name="peso">
+                        <input matInput placeholder="Peso (KG)"  [(value)]="product.peso" name="peso" disabled>
                     </mat-form-field>
                 </td>
 
                 <td>
                     <mat-form-field>
-                        <input matInput placeholder="comprimento (cm)"  [(ngModel)]="product.comprimento" name="comprimento">
+                        <input matInput placeholder="comprimento (cm)"  [(value)]="product.comprimento" name="comprimento" disabled>
                     </mat-form-field>
                 </td>
 
                 <td>
                     <mat-form-field >
-                        <input matInput placeholder="altura (cm)"  [(ngModel)]="product.altura" name="altura">
+                        <input matInput placeholder="altura (cm)"  [(value)]="product.altura" name="altura" disabled>
                     </mat-form-field>
                 </td>
           </tr>
         </table>
 
-
+       
         <table class="example-full-width" cellspacing="0">
+            
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="imagem"  [(ngModel)]="product.imagem" name="imagem">
+                        <input matInput placeholder="imagem"  [(value)]="product.imagem" name="imagem" disabled>
+                        
                     </mat-form-field>
                 </td>
                
@@ -68,12 +76,12 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="descricao"  [(ngModel)]="product.descricao" name="descricao">
+                        <input matInput placeholder="descricao"  [(value)]="product.descricao" name="descricao" disabled>
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Descricao Curta"  [(ngModel)]="product.descricao_curta" name="descricao_curta">
+                        <input matInput placeholder="Descricao Curta"  [(value)]="product.descricao_curta" name="descricao_curta"disabled>
                     </mat-form-field>
                 </td>
           </tr>
@@ -83,19 +91,19 @@
             <tr>
                 <td>
                     <mat-form-field class="codigo_ean13">
-                        <input matInput placeholder="Fabricante"  [(ngModel)]="product.fabricante" name="fabricante">
+                        <input matInput placeholder="Fabricante"  [(value)]="product.fabricante" name="fabricante" disabled>
                     </mat-form-field>
             
                 </td>
                 <td>
                     <mat-form-field class="categoria">
-                        <input matInput placeholder="Categoria"  [(ngModel)]="product.categ_id" name="categ_id">
+                        <input matInput placeholder="Categoria"  [(value)]="product.categ_id" name="categ_id" disabled>
                     </mat-form-field>
                 </td>
 
                 <td>
                     <mat-form-field>
-                        <input matInput placeholder="Quantidade (R$)"  [(ngModel)]="product.quant" name="quant">
+                        <input matInput placeholder="Quantidade (R$)"  [(value)]="product.quant" name="quant" disabled>
                     </mat-form-field>
                 </td>
           </tr>
@@ -104,11 +112,11 @@
        
     </form>
 
-    <button mat-raised-button (click)="updateProduct()" class="green">
-        Atualizar
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
+        Excluir
     </button>
     
-    <button mat-raised-button (click)="cancel()" color="primary" >
+    <button mat-raised-button (click)="cancel()" color="primary">
         Cancelar
     </button>
 </mat-card>

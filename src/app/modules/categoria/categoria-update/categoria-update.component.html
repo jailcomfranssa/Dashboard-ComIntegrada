@@ -1,0 +1,27 @@
+<mat-card class="mat-elevation-z8" class="carde">
+    <mat-card-title>Atualizar Produto</mat-card-title>
+    <form >
+        
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nome" [(ngModel)]="categoria.nome" name="nome">
+                    </mat-form-field>
+                </td>
+   
+          </tr>
+        </table>
+       
+    </form>
+
+    <button mat-raised-button (click)="updateProduct()" class="green">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="primary" >
+        Cancelar
+    </button>
+</mat-card>

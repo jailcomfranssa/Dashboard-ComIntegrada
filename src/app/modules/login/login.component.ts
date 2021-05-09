@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private accountService: AccountService , private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   async onSubmit(){
@@ -26,6 +27,9 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['']);
 
     }catch (error){
+      
+      this.accountService.showMessage('Erro no Login')
+      
       console.log(error);
 
     }
