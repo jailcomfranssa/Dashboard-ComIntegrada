@@ -1,3 +1,5 @@
+import { UserModel } from './../funcionario-post/user.model';
+  
 import { EMPTY, Observable } from 'rxjs';
 import { Funcionario } from './funcionario.model';
 import { DashboardService } from './../../dashboard.service';
@@ -13,16 +15,25 @@ export class FuncionarioService {
 
   constructor( private http: HttpClient, private msg: DashboardService) { }
 
-  create(funcionario: Funcionario): Observable<Funcionario>{
-    return this.http.post<Funcionario>(`${environment.api}/auth/register`,funcionario).pipe(
-      map((obj) => obj),
-      catchError((e) => this.errorHandler(e))
-
-    )
-  }
-
   errorHandler(e: any): Observable<any>{
     this.msg.showMessage('Ocorreu um erro!', true);
     return EMPTY;
   }
+  create(user: UserModel): Observable<UserModel>{
+    return this.http.post<UserModel>(`${environment.api}/auth/register`,user).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+
+    )
+
+  }
+
+  read(): Observable<Funcionario[]> {
+    return this.http.get<Funcionario[]>(`${environment.api}/enderecos`);
+  }
+
+
+ 
+
+ 
 }

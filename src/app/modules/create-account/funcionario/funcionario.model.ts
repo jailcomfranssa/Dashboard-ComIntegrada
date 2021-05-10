@@ -1,10 +1,13 @@
 export interface Funcionario{
-    id?: number,
-    name: string,
-	email:string,
-	password:string,
-	nascimento: number,
-	tipo:string,
-	documento:string,
-	is_user:0 
+
+	id?: number,
+    rua: string,
+    numero: string,
+    complemento:string,
+    cidade:string,
+    estado: string,
+    bairro:string,
+    user_id:number
+	
+    
 }

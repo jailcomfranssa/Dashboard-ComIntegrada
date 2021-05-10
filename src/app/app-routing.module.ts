@@ -1,3 +1,5 @@
+import { PedidosReadComponent } from './modules/pedido/pedidos-read/pedidos-read.component';
+import { PedidosComponent } from './modules/pedido/pedidos/pedidos.component';
 import { CategoriaReadComponent } from './modules/categoria/categoria-read/categoria-read.component';
 import { CategoriaDeleteComponent } from './modules/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaUpdateComponent } from './modules/categoria/categoria-update/categoria-update.component';
@@ -91,6 +93,18 @@ const routes: Routes = [
       {
         path:'categoria/creat',
         component:CategoriaReadComponent
+      },
+
+      //Pedidos
+
+      {
+        path:'pedido',
+        component:PedidosComponent
+      },
+      {
+        path:'pedido/list',
+        component:PedidosReadComponent
+        
       }
 
 

@@ -1,3 +1,5 @@
+import { PedidosReadComponent } from './../../modules/pedido/pedidos-read/pedidos-read.component';
+import { PedidosComponent } from './../../modules/pedido/pedidos/pedidos.component';
 import { CategoriaUpdateComponent } from './../../modules/categoria/categoria-update/categoria-update.component';
 import { CategoriaReadComponent } from './../../modules/categoria/categoria-read/categoria-read.component';
 import { CategoriaPostComponent } from './../../modules/categoria/categoria-post/categoria-post.component';
@@ -66,6 +68,8 @@ import { ProductDeleteComponent } from 'src/app/modules/products/product-delete/
     CategoriaPostComponent,
     CategoriaReadComponent,
     CategoriaUpdateComponent,
+    PedidosComponent,
+    PedidosReadComponent
 
   ],
   imports: [

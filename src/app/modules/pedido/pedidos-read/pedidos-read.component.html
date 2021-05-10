@@ -1,0 +1,43 @@
+<mat-form-field>
+    <mat-label>Pesquisar</mat-label>
+    <input matInput placeholder="Pesquisar Categoria" (keyup)="applyFilter($event)">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+                
+            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+                
+        </ng-container>
+
+        <ng-container matColumnDef="quantidade">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Vendido</th>
+            <td mat-cell *matCellDef="let row">{{row.quantidade}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Produto</th>
+            <td mat-cell *matCellDef="let row">{{row.produto.nome}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="preco">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Preco UNID</th>
+            <td mat-cell *matCellDef="let row"> R$-{{row.produto.preco  }} </td>
+        </ng-container>
+
+
+       
+
+
+        <tr mat-header-row *matHeaderRowDef="columns" ></tr>
+            
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    </table>
+
+    <mat-paginator [length]="inpedido.length"
+              [pageSize]="9"
+              [pageSizeOptions]="[9,5,3]">
+    </mat-paginator>
+</div>

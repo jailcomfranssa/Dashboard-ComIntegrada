@@ -1,1 +1,70 @@
-<p>funcionario-post works!</p>
+<mat-card class="mat-elevation-z8" class="carde">
+    <mat-card-title>Novo Funcionario</mat-card-title>
+    <form >
+        
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                
+                <td>
+                    <mat-form-field class="codigo_ean13">
+                        <input matInput placeholder="Nome" [(ngModel)]="usuario.name"  name="nome">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="Data Nascimento" [(ngModel)]="usuario.nascimento" name="data">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="CPF" [(ngModel)]="usuario.documento"  name="cpf">
+                    </mat-form-field>
+                </td>
+
+               
+          </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="E-mail" [(ngModel)]="usuario.email" name="E-mail">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Senha" [(ngModel)]="usuario.password"  name="Senha">
+                    </mat-form-field>
+                </td>
+               
+          </tr>
+        </table>
+
+
+        
+
+
+       
+
+
+       
+
+        
+
+       
+    </form>
+
+    <button mat-raised-button (click)="createUser()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" >
+        Cancelar
+    </button>
+</mat-card>
