@@ -7,19 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
    correnteUser = localStorage.getItem("token")
+   usuario = window.localStorage.getItem('name')
 
-  constructor() { 
-    
+  constructor() {
+
   }
 
-  
+
   ngOnInit(): void {
-    
-    
+
+
   }
 
   correnteUsuario(){
-    
+
 
   }
 

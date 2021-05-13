@@ -10,19 +10,19 @@ export class DashboardService {
 
   bigChart() {
     return [{
-      name: 'Asia',
+      name: 'Eletrônico',
       data: [502, 635, 809, 947, 1402, 3634, 5268]
     }, {
-      name: 'Africa',
+      name: 'Telefonia',
       data: [106, 107, 111, 133, 221, 767, 1766]
     }, {
-      name: 'Europe',
+      name: 'Cozinha',
       data: [163, 203, 276, 408, 547, 729, 628]
     }, {
-      name: 'America',
+      name: 'Ciclismo',
       data: [18, 31, 54, 156, 339, 818, 1201]
     }, {
-      name: 'Oceania',
+      name: 'Livros',
       data: [2, 2, 2, 6, 13, 30, 46]
     }];
   }
@@ -74,5 +74,5 @@ export class DashboardService {
     })
 }
 
-  
+
 }
