@@ -64,7 +64,7 @@ const routes: Routes = [
       },
 
        {
-         path: 'pedirproduto',
+         path: 'pedirproduto/:cod',
          component: ApiPostComponent,
        },
 

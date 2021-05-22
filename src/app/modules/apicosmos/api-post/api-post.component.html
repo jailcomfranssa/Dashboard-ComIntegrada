@@ -1,1 +1,49 @@
-<p>api-post works!</p>
+<mat-card class="mat-elevation-z8" class="carde">
+    <mat-card-title>Cadastrar Produto</mat-card-title>
+    <form >
+        
+
+
+        <table class="example-full-width" >
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nome" [(ngModel)]="result.description" name="nome">
+                    </mat-form-field>
+                </td>
+   
+          </tr>
+        </table>
+
+        <table class="example-full-width" >
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Preço" [(ngModel)]="result.avg_price" name="preco">
+                    </mat-form-field>
+                </td>
+   
+          </tr>
+        </table>
+
+        <table class="example-full-width" >
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Descrição" [(ngModel)]="result.ncm.full_description" name="descricao">
+                    </mat-form-field>
+                </td>
+   
+          </tr>
+        </table>
+       
+    </form>
+
+    <button mat-raised-button  class="green">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button  color="primary" >
+        Cancelar
+    </button>
+</mat-card>

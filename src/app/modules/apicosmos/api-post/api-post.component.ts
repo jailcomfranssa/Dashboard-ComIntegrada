@@ -1,3 +1,6 @@
+import { DashboardService } from './../../dashboard.service';
+import { ApiService } from './../api.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiPostComponent implements OnInit {
 
-  constructor() { }
+  result: any
+
+  constructor(private router:Router, private route: ActivatedRoute, private apiService: ApiService, private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
+    const cod = this.route.snapshot.paramMap.get('cod')
+    this.apiService.getAll(cod).subscribe(api =>{
+      this.result = api
+      console.log(this.result);
+    })
   }
 
 }
