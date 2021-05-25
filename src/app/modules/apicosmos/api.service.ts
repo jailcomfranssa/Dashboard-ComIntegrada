@@ -1,3 +1,4 @@
+import { Categoria } from './../categoria/categoria/categoria.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -44,5 +45,9 @@ export class ApiService {
         catchError((e) => this.errorHandler(e))
     )
 
-}
+  }
+
+  read(): Observable<Categoria[]> {
+    return this.http.get<Categoria[]>(`${environment.api}/categs`);
+  }
 }

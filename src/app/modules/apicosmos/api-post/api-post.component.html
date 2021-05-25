@@ -88,9 +88,16 @@
             
                 </td>
                 <td>
-                    <mat-form-field class="categoria">
-                        <input matInput placeholder="Categoria"[(ngModel)]= "product.categ_id"  name="categ_id">
-                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Categoria</mat-label>
+                        <select matNativeControl required name="categ_id" [(ngModel)]= "product.categ_id" >
+                            <option *ngFor="let categ of resultcateg" [value]="categ.id" >
+                                {{categ.nome}}
+                                
+                            </option>
+                        </select>
+                      </mat-form-field>
+                    
                 </td>
 
                 <td>

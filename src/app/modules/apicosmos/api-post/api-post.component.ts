@@ -1,8 +1,11 @@
+import { Categoria } from './../../categoria/categoria/categoria.model';
 import { ApiResult } from './../result.model';
 import { DashboardService } from './../../dashboard.service';
 import { ApiService } from './../api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-api-post',
@@ -26,12 +29,28 @@ export class ApiPostComponent implements OnInit {
     quant: null
   }
 
+  inCategoria: Categoria = {
+    id:null,
+    nome:'',
+  }
+
+ 
+
   result: any
+  resultcateg: any
 
   constructor(private router:Router, private route: ActivatedRoute, private apiService: ApiService, private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
     const cod = this.route.snapshot.paramMap.get('cod')
+    this.apiService.read().subscribe(Categoria =>{
+      this.resultcateg = Categoria
+     
+      
+      console.log(this.resultcateg);
+      
+    })
+
     this.apiService.getAll(cod).subscribe(api =>{
       this.result = api
       this.product.nome = this.result.description
@@ -44,12 +63,17 @@ export class ApiPostComponent implements OnInit {
       this.product.descricao_curta = this.result.description
       this.product.preco = this.result.avg_price
       this.product.fabricante = this.result.brand.name
+      
+      
 
       console.log(this.result);
+      
+      
     })
   }
 
   createProduct(): void{
+    
     this.apiService.create(this.product).subscribe(()=>{
       this.apiService.showMessage('Produto Criado com Sucesso !!')
       this.router.navigate(['/produtos'])
