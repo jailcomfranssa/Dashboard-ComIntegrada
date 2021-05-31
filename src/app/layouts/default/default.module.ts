@@ -1,3 +1,5 @@
+import { ApiPostComponent } from './../../modules/apicosmos/api-post/api-post.component';
+import { ApiReadComponent } from './../../modules/apicosmos/api-read/api-read.component';
 import { PedidosReadComponent } from './../../modules/pedido/pedidos-read/pedidos-read.component';
 import { PedidosComponent } from './../../modules/pedido/pedidos/pedidos.component';
 import { CategoriaUpdateComponent } from './../../modules/categoria/categoria-update/categoria-update.component';
@@ -69,7 +71,9 @@ import { ProductDeleteComponent } from 'src/app/modules/products/product-delete/
     CategoriaReadComponent,
     CategoriaUpdateComponent,
     PedidosComponent,
-    PedidosReadComponent
+    PedidosReadComponent,
+    ApiReadComponent,
+    ApiPostComponent
 
   ],
   imports: [
@@ -93,16 +97,16 @@ import { ProductDeleteComponent } from 'src/app/modules/products/product-delete/
     MatSortModule,
     MatMenuModule,
     MatGridListModule,
-   
-   
-    
+
+
+
   ],
   providers:[
     DashboardService,
     httpInterceptorProviders,
     Component,
-    
-    
+
+
   ]
 })
 export class DefaultModule { }

@@ -3,22 +3,13 @@
     max-width: 500px;
     width: 100%;
   }
-
+  
   .example-full-width {
     width: 100%;
   }
 
   .codigo_ean13{
-    margin-left: 2%;
-    width: 180px;
-  }
-
-  .grande{
-    margin-left: 2%;
-    width: 60%;
-  }
-  .medio{
-    width: 220px;
+    width: 475px;
   }
 
   .categoria{
@@ -28,18 +19,20 @@
   .carde{
     margin-top: 70px;
     /**float: left;**/
-
+    
   }
-
+  
   td {
     padding-right: 8px;
   }
-
+  
 
 button{
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px; 
+    
 }
 
-.spa{ padding-right: 8%;}
-   
-
+.green{
+  background-color: green;
+    color: white;
+}

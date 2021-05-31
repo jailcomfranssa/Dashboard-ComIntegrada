@@ -1,55 +1,70 @@
 <mat-card class="mat-elevation-z8" class="carde">
     <mat-card-title>Novo Produto</mat-card-title>
+    
     <form >
         
 
+        <mat-grid-list cols="2" >
 
-        <table class="example-full-width" cellspacing="0">
-            <tr>
-                <td>
-                    <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Nome" [(ngModel)]="product.nome" name="nome">
-                    </mat-form-field>
-                </td>
+           
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    
+                        <mat-form-field class="grande spa">
+                            <input matInput placeholder="Nome" [(ngModel)]="product.nome" name="nome">
+                        </mat-form-field>
+                   
 
-                <td>
-                    <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Preço (R$)"  [(ngModel)]="product.preco" name="preco">
-                    </mat-form-field>
-                </td>
-               
-          </tr>
-        </table>
-
-
-        <table class="example-full-width" cellspacing="0">
-            <tr>
+                    
+                        <mat-form-field class="medio spa">
+                            <input matInput placeholder="Preço (R$)"  [(ngModel)]="product.preco" name="preco">
+                        </mat-form-field>
+                    
                 
-                <td>
-                    <mat-form-field class="codigo_ean13">
-                        <input matInput placeholder="codigo_ean13"  [(ngModel)]="product.codigo_ean13" name="codigo_ean13">
-                    </mat-form-field>
-                </td>
+                </tr>
+            </table>
 
-                <td>
-                    <mat-form-field>
-                        <input matInput placeholder="Peso (KG)"  [(ngModel)]="product.peso" name="peso">
-                    </mat-form-field>
-                </td>
+        </mat-grid-list>
 
-                <td>
-                    <mat-form-field>
-                        <input matInput placeholder="comprimento (cm)"  [(ngModel)]="product.comprimento" name="comprimento">
-                    </mat-form-field>
-                </td>
 
-                <td>
-                    <mat-form-field >
-                        <input matInput placeholder="altura (cm)"  [(ngModel)]="product.altura" name="altura">
-                    </mat-form-field>
-                </td>
-          </tr>
-        </table>
+
+        <mat-grid-list cols="2" >
+
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+               
+                    
+                   
+                        <mat-form-field class="codigo_ean13 spa">
+                            <input matInput placeholder="codigo_ean13"  [(ngModel)]="product.codigo_ean13" name="codigo_ean13">
+                        </mat-form-field> 
+                   
+                   
+    
+                    
+                        <mat-form-field class="spa">
+                            <input matInput placeholder="Peso (KG)"  [(ngModel)]="product.peso" name="peso">
+                        </mat-form-field>
+                    
+    
+                    
+                        <mat-form-field class="spa">
+                            <input matInput placeholder="comprimento (cm)"  [(ngModel)]="product.comprimento" name="comprimento">
+                        </mat-form-field>
+                  
+    
+                    
+                        <mat-form-field class="spa" >
+                            <input matInput placeholder="altura (cm)"  [(ngModel)]="product.altura" name="altura">
+                        </mat-form-field>
+                  
+                </tr>
+                    
+              
+            </table>
+
+        </mat-grid-list>
+       
 
 
         <table class="example-full-width" cellspacing="0">

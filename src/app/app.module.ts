@@ -6,24 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import {MatGridListModule} from '@angular/material/grid-list';
-
-
-
-
 @NgModule({
   declarations: [
-    AppComponent,
-    
-    
-    
-     
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DefaultModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

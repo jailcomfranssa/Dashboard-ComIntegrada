@@ -32,7 +32,7 @@ export class ProdutosReadComponent implements OnInit {
 
   dataSource: MatTableDataSource<InProducts>;
   inProducts: InProducts[] = [];
-  columns: string[] = ['id','nome','codigo_ean13','preco','espc','quant','descricao_curta','fabricante','categ_id','acao'];
+  columns: string[] = ['id','nome','preco','espc','quant','descricao_curta','fabricante','categ_id','acao'];
 
   @ViewChild(MatSort,{static:true}) sort: MatSort;
   @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;

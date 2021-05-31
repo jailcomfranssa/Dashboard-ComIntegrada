@@ -1,37 +1,37 @@
 <mat-nav-list  *ngIf="correnteUser">
     <div class="profile-card">
         <div class="header"></div>
-        <h2> Soufiane FADIL</h2>
-        <h4>exemplo@email.com</h4>
-        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="soufiane FADIL">
+        <h2 >{{usuario}}</h2>
+
+        <img src="https://img2.gratispng.com/20180315/bvw/kisspng-computer-icons-clip-art-man-icon-5aab18532f4b00.7479404715211623231937.jpg" alt="soufiane FADIL">
     </div>
 
     <mat-divider></mat-divider>
 
-    <h2 matSubheader> Pages</h2>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-    
+    <h2 matSubheader> Páginas</h2>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Painel de controle</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/produtoexterno">Consulta Código de barras</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/creatConta">Funcionario</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/produtos">Produtos</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Criar Produto</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/categoria">Categoria </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/categoria/post">Criar Categoria</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/categoria">Categorias </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/categoria/post">Nova Categoria</a>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/pedido/list">Pedidos</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Clientes</a>
-    
 
-    
+
+
+
     <mat-divider></mat-divider>
-    
-    <h2 matSubheader>Tools</h2>
+
+    <h2 matSubheader>Ferramentas</h2>
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
         <mat-icon>import_contacts</mat-icon>
-        Contacts
+        Contatos
     </a>
 
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
         <mat-icon>contact_phone</mat-icon>
-        Leads
+        Potenciais clientes
     </a>
 
 </mat-nav-list>

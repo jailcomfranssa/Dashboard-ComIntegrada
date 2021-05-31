@@ -1,3 +1,5 @@
+import { ApiPostComponent } from './modules/apicosmos/api-post/api-post.component';
+import { ApiReadComponent } from './modules/apicosmos/api-read/api-read.component';
 import { PedidosReadComponent } from './modules/pedido/pedidos-read/pedidos-read.component';
 import { PedidosComponent } from './modules/pedido/pedidos/pedidos.component';
 import { CategoriaReadComponent } from './modules/categoria/categoria-read/categoria-read.component';
@@ -31,7 +33,7 @@ const routes: Routes = [
       {
         path:'',
         component:DashboardComponent
-      }, 
+      },
 
       //produto******
       {
@@ -53,6 +55,18 @@ const routes: Routes = [
         path:'produto/delete/:id',
         component: ProductDeleteComponent
       },
+
+      //produtos de api externa*
+      {
+        path: 'produtoexterno',
+        component: ApiReadComponent,
+
+      },
+
+       {
+         path: 'pedirproduto/:cod',
+         component: ApiPostComponent,
+       },
 
       //funcionario*******
 
@@ -104,13 +118,13 @@ const routes: Routes = [
       {
         path:'pedido/list',
         component:PedidosReadComponent
-        
+
       }
 
 
 
-     
-     
+
+
   ],
     canActivate:[AuthGuard]
   },
@@ -118,14 +132,14 @@ const routes: Routes = [
     path: '',
     component:DefaultComponent,
     children:[
-     
+
       {
         path: 'login',
         component: LoginComponent,
-        
+
       },
-     
-      
+
+
     ]
   }
 

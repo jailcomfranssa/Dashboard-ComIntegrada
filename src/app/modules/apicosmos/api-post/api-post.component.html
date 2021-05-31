@@ -1,0 +1,121 @@
+<mat-card class="mat-elevation-z8" class="carde">
+    <mat-card-title>Cadastar Produto</mat-card-title>
+    <form >
+        
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nome" [(ngModel)]="product.nome"   name="nome">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Preço (R$)"  [(ngModel)]="product.preco" name="preco">
+                    </mat-form-field>
+                </td>
+               
+          </tr>
+        </table>
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                
+                <td>
+                    <mat-form-field class="codigo_ean13">
+                        <input matInput placeholder="codigo_ean13" [(ngModel)]="product.codigo_ean13"  name="codigo_ean13">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="Peso (KG)" [(ngModel)]="product.peso" name="peso">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="comprimento (cm)" [(ngModel)]="product.comprimento"   name="comprimento">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field >
+                        <input matInput placeholder="altura (cm)" [(ngModel)]="product.altura"   name="altura">
+                    </mat-form-field>
+                </td>
+          </tr>
+        </table>
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="imagem" [(ngModel)]="product.imagem"  name="imagem">
+                    </mat-form-field>
+                </td>
+               
+          </tr>
+        </table>
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="descricao"  [(ngModel)]="product.descricao" name="descricao">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Descricao Curta"  [(ngModel)]="product.descricao_curta" name="descricao_curta">
+                    </mat-form-field>
+                </td>
+          </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="codigo_ean13">
+                        <input matInput placeholder="Fabricante" [(ngModel)]="product.fabricante"  name="fabricante">
+                    </mat-form-field>
+            
+                </td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Categoria</mat-label>
+                        <select matNativeControl required name="categ_id" [(ngModel)]= "product.categ_id" >
+                            <option *ngFor="let categ of resultcateg" [value]="categ.id" >
+                                {{categ.nome}}
+                                
+                            </option>
+                        </select>
+                      </mat-form-field>
+                    
+                </td>
+
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="Quantidade (UN.)"[(ngModel)]="product.quant"   name="quant">
+                    </mat-form-field>
+                </td>
+          </tr>
+        </table>
+
+       
+    </form>
+
+    <button mat-raised-button (click)="createProduct()"  class="green">
+        Cadastrar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="primary" >
+        Cancelar
+    </button>
+</mat-card>
